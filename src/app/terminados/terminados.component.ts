@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DeseosService } from '../services/deseos.service';
+import { Lista } from '../../models/lista.model';
 
 @Component({
   selector: 'app-terminados',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TerminadosComponent implements OnInit {
 
-  constructor() { }
+  constructor( public deseosService: DeseosService) { }
 
   ngOnInit() {
   }
+
+  listaSeleccionada (lista: Lista) {
+    console.log(lista);
+    
+  }
+
 
 }
